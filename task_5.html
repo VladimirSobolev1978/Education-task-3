@@ -1,0 +1,41 @@
+<!--3. Дана строка. Если символы в ней упорядочены по алфавиту, то вывести 'yes', иначе 'no'.
+Input:
+'abdfj'
+
+Output:
+'yes'
+
+Input:
+'hello'
+
+Output:
+'no'
+-->
+
+
+<!--/*ЗАДАЧА 5*/-->
+<script>
+
+    const str = 'aBcd';
+
+    // const str = 'acb';
+
+
+    function orderlyFunc(string) {
+        let result;
+        let str1 = string.toLowerCase().split('').sort().join('');
+        console.log(str1)
+        if (string.toLowerCase() === str1){
+            result = 'yes';
+        } else {
+            result = 'no';
+        }
+
+       return result;
+    }
+
+    const t = orderlyFunc(str);
+    console.log(t)
+
+</script>
+<!--/*ЗАДАЧА 5*/-->
