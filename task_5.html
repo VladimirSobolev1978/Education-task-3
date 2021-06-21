@@ -22,16 +22,7 @@ Output:
 
 
     function orderlyFunc(string = '') {
-        let result;
-        let str1 = string.toLowerCase().split('').sort().join('');
-        console.log(str1)
-        if (string.toLowerCase() === str1){
-            result = 'yes';
-        } else {
-            result = 'no';
-        }
-
-        return result;
+        return string.toLowerCase().split('').sort().join('') === string.toLowerCase() ? 'yes' : 'no';
     }
 
     const t = orderlyFunc(str);
