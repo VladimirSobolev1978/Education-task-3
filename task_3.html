@@ -1,16 +1,15 @@
-<!--31. Напишите функцию, которая преобразует массив вида let arr = [{name: 'width', value: 300}, {name: 'height', value: 100}];
-в объект let obj = {width:300, height: 100}; Количество объектов в массиве неограниченно.-->
+<!--31. Напишите функцию, которая преобразует массив вида
+let arr = [{name: 'width', value: 300}, {name: 'height', value: 100}, {name: 'size', value:20}];
+в объект let obj = {width:300, height: 100, size: 20}; Количество объектов в массиве неограниченно.-->
 
 <!--/*ЗАДАЧА 3*/-->
 
 <script>
     const arr = [{name: 'width', value: 300}, {name: 'height', value: 100}];
-
+    const arr1 = {width: 300, height: 100}
 
     function convertFunc(array) {
-        return array.map((currentValue) => {
-            return {width: currentValue.value, height: currentValue.value}
-        })
+        return array.reduce((acc, currentValue) => ({...acc, [currentValue.name]: currentValue.value}), {})
     }
 
     const t = convertFunc(arr);
