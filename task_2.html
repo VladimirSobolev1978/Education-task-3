@@ -1,22 +1,22 @@
-<!--32. Заполните массив следующим образом:
-в первый элемент запишите 'x', во второй 'xx', в третий 'xxx' и так далее.-->
-
+<!--32. -->
+<!--0 => []-->
+<!--1 => ['x']-->
+<!--2 => ['x', 'xx']-->
 <!--/*ЗАДАЧА 2*/-->
 <script>
 
-    const arr = [];
-    const str = '';
 
-
-    function fillFunc(array, string) {
-        for (let i = 0; i < 7; i ++) {
-            string += 'x';
-            array.push(string);
+    function fillFunc(count) {
+        const array = [];
+        let str1 = '';
+        for (let i = 0; i < count; i++) {
+            str1 += 'x';
+            array.push(str1);
         }
         return array;
     }
 
-    const t = fillFunc(arr, str);
+    const t = fillFunc(0);
     console.log(t)
 
 </script>
