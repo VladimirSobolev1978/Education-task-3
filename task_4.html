@@ -1,0 +1,17 @@
+<!--30. Переставить местами максимальный и минимальный элемент в массиве-->
+
+<script>
+    const arr = [5, 7, 2, 9, 5, 6, 3, 1, 8];
+
+   function rearrangeFunc(array) {
+       let max = array.indexOf(Math.max(...array));
+       let min = array.indexOf(Math.min(...array));
+       let newArray = [...array];
+       newArray[max] = array[min];
+       newArray[min] = array[max];
+       return newArray;
+   }
+
+   const t = rearrangeFunc(arr);
+    console.log(t)
+</script>
