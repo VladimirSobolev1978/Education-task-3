@@ -1,0 +1,22 @@
+<!--24. Дана строка. Определить, содержит ли строка только символы 'a', 'b', 'c' или нет.-->
+<!--Input:-->
+<!--'abcbacabcbcabcbaba'  true-->
+
+<!--'abcbacabcqbcabcbnaba' false-->
+
+<!--/*ЗАДАЧА 6*/-->
+<script>
+
+    // const string = 'abcbacabcbcabcbaba';
+
+    const string = 'abcbacabcqbcabcbnaba';
+
+    function defineFunc(str = '') {
+        let str1 = str.toLowerCase().split('');
+        return str1.every(element => element === 'a' || element === 'b' || element === 'c')
+    }
+
+    const t = defineFunc(string);
+    console.log(t)
+</script>
+<!--/*ЗАДАЧА 6*/-->
