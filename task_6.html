@@ -12,7 +12,7 @@
     const string = 'abcbacabcqbcabcbnaba';
 
     function defineFunc(str = '') {
-        let str1 = str.toLowerCase().split('');
+        const str1 = str.toLowerCase().split('');
         return str1.every(element => element === 'a' || element === 'b' || element === 'c')
     }
 
