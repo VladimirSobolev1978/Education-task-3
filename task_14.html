@@ -1,0 +1,16 @@
+<!--6. Удалить из массива значение с конкретным индексом-->
+
+<!--/*ЗАДАЧА 14*/-->
+<script>
+    const array = [5, 3, 8, 2, 9, 4, 1, 7];
+    const arg = 4;
+
+    function deleteFunc(arr, num) {
+        arr.splice(num, 1);
+        return arr;
+    }
+
+    const t = deleteFunc(array, arg);
+    console.log(t)
+</script>
+<!--/*ЗАДАЧА 14*/-->
