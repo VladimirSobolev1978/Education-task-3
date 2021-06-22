@@ -13,7 +13,8 @@
 
     function defineFunc(str = '') {
         const str1 = str.toLowerCase().split('');
-        return str1.every(element => ['a', 'b', 'c'].includes(element))
+        // return str1.every(element => ['a', 'b', 'c'].includes(element))
+        return !str1.some(element => !['a', 'b', 'c'].includes(element))
     }
 
     const t = defineFunc(string);
