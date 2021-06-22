@@ -1,0 +1,23 @@
+<!--21. Сделайте функцию inArray, которая определяет, есть в массиве элемент с заданным текстом или нет.
+Функция первым параметром должна принимать текст элемента, а
+ вторым - массив, в котором делается поиск. Функция должна возвращать true или false.-->
+
+<!--/*ЗАДАЧА 8*/-->
+
+<script>
+    const string = 'test';
+    const array =  ['text', 'education', 'part', '2', 'exceed', 'team'];
+
+    // const string = 'exceed';
+    // const array = ['text', 'education', 'part', '2', 'exceed', 'team'];
+
+    function inArray(str, arr) {
+        return arr.some(element => str.includes(element));
+    }
+
+    const t = inArray(string, array);
+    console.log(t);
+</script>
+
+
+<!--/*ЗАДАЧА 8*/-->
