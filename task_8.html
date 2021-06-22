@@ -12,7 +12,8 @@
     // const array = ['text', 'education', 'part', '2', 'exceed', 'team'];
 
     function inArray(str, arr) {
-       return arr.includes(str);
+       // return arr.includes(str);
+        return arr.some(element => element === str)
     }
 
     const t = inArray(string, array);
