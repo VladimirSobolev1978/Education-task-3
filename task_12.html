@@ -1,0 +1,27 @@
+<!--25. Дана строка. Заменить все символы 'a' и 'b' на 'A' и 'B' соответственно.-->
+
+<!--Input:-->
+<!--'abcetgbabctest'-->
+
+<!--Output:-->
+<!--'ABcetgBABctest'-->
+
+<!--/*ЗАДАЧА 12*/-->
+<script>
+    const string = 'abcetgbabctest'
+
+    function replaceFunc(str) {
+        let newStr = str.split('');
+        return newStr.map(element => {
+            if (['a', 'b'].includes(element)) {
+                return element.toUpperCase();
+            }
+            return element;
+        }).join('');
+
+    }
+
+    const t = replaceFunc(string);
+    console.log(t);
+</script>
+<!--/*ЗАДАЧА 12*/-->
