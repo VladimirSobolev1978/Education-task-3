@@ -1,0 +1,15 @@
+<!--17. Вернуть массив тех значений, которые есть и в первом и во втором-->
+
+<!--/*ЗАДАЧА 13*/-->
+<script>
+    const array = [5, 2, 7, 3, 6, 8, 9, 1];
+    const array2 = [4, 2, 9, 4, 5, 4];
+    
+    function returnFunc(arr1, arr2) {
+        return arr2.filter(element => arr1.includes(element));
+    }
+
+    const t = returnFunc(array, array2);
+    console.log(t)
+</script>
+<!--/*ЗАДАЧА 13*/-->
