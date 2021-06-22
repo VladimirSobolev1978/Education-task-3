@@ -5,7 +5,7 @@
     const string = 'http://www.figma.com/';
 
     function checkFunc(str) {
-       return /http:\/\//gi.test(str);
+       return /^http:\/\/\w/gi.test(str);
     }
 
     const t = checkFunc(string);
