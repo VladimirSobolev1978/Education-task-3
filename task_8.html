@@ -5,14 +5,14 @@
 <!--/*ЗАДАЧА 8*/-->
 
 <script>
-    const string = 'test';
+    const string = 'text';
     const array =  ['text', 'education', 'part', '2', 'exceed', 'team'];
 
     // const string = 'exceed';
     // const array = ['text', 'education', 'part', '2', 'exceed', 'team'];
 
     function inArray(str, arr) {
-        return arr.some(element => str.includes(element));
+        return arr.some(element => element.includes(str));
     }
 
     const t = inArray(string, array);
