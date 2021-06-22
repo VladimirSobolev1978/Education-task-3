@@ -1,0 +1,19 @@
+<!--10. Добавить все значения из второго массива в первый-->
+
+<!--Input:-->
+<!--([4, 1, 8, 5, 23], [654, 2, 8, 4, 7])-->
+
+<!--Output:-->
+<!--[4, 1, 8, 5, 23, 654, 2, 8, 4, 7]-->
+
+<script>
+    const arr1 = [4, 1, 8, 5, 23];
+    const arr2 = [654, 2, 8, 4, 7];
+    
+    function addFunc(array1, array2) {
+        return [...array1, ...array2];
+    }
+
+    const t = addFunc(arr1, arr2);
+    console.log(t)
+</script>
