@@ -7,13 +7,13 @@
 <!--/*ЗАДАЧА 6*/-->
 <script>
 
-    // const string = 'abcbacabcbcabcbaba';
+    const string = 'abcbacabcbcabcbaba';
 
-    const string = 'abcbacabcqbcabcbnaba';
+    // const string = 'abcbacabcqbcabcbnaba';
 
     function defineFunc(str = '') {
         const str1 = str.toLowerCase().split('');
-        return str1.every(element => element === 'a' || element === 'b' || element === 'c')
+        return str1.every(element => ['a', 'b', 'c'].includes(element))
     }
 
     const t = defineFunc(string);
