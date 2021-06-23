@@ -1,0 +1,22 @@
+<!--29. Вернуть массив ключей объекта-->
+
+<!--/*ЗАДАЧА 15*/-->
+<script>
+    const obj = {
+        name: 'test',
+        age: 34,
+        country: 'RF'
+    }
+    
+    function returnFunc(object) {
+        const arrKey = [];
+        for (const objectKey in object) {
+            arrKey.push(objectKey);
+        }
+        return arrKey;
+    }
+    
+    const t = returnFunc(obj);
+    console.log(t)
+</script>
+<!--/*ЗАДАЧА 15*/-->
