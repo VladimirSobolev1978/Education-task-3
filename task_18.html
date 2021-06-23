@@ -1,0 +1,26 @@
+<!--23. Реализуйте функцию, которая параметром принимает строку вида '__|----|_|-|____|---'. Где '_' - обозначает 0, а '-' - обозначает 1.
+Нужно вернуть конвертированную строку вида '00111101000011'.
+Длина строки может быть различной и повторений 1 символа тоже не ограниченно.-->
+
+<!--/*ЗАДАЧА 18*/-->
+<script>
+    const string = '__----_-__--';
+
+    function convertFunc(str) {
+        const newStr = str.split('');
+        const str1 = '0';
+        const str2 = '1';
+        return newStr.map(element => {
+            if ('-' === element) {
+                return str2;
+            }
+            if ('_' === element) {
+                return str1;
+            }
+        }).join('');
+    }
+
+    const t = convertFunc(string);
+    console.log(t)
+</script>
+<!--/*ЗАДАЧА 18*/-->
