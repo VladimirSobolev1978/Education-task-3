@@ -1,0 +1,15 @@
+<!--8. Возвращает рандомный элемент массива-->
+
+<!--/*ЗАДАЧА 19*/-->
+<script>
+    const array = [4, 8, 2, 9, 4, 6, 5, 1, 7, 4];
+    
+    function randomFunc(arr) {
+        let number = Math.ceil(Math.random() * arr.length);
+        return arr[number];
+    }
+
+    const t = randomFunc(array);
+    console.log(t);
+</script>
+<!--/*ЗАДАЧА 19*/-->
