@@ -1,0 +1,21 @@
+<!--27. Строка состоит из слов, разделенных одним или несколькими пробелами. Найдите слово наибольшей длины.-->
+
+<!--/*ЗАДАЧА 16*/-->
+<script>
+    const string = 'text education exceed.team part 2 for test';
+
+    function lengthFunc(str) {
+        let str1 = str.split(' ');
+        let strMax = str1[0];
+        for (let i = 1; i < str1.length; i++) {
+            if (str1[i].length > strMax.length) {
+                strMax = str1[i];
+            }
+        }
+        return strMax;
+    }
+
+    const t = lengthFunc(string);
+    console.log(t);
+</script>
+<!--/*ЗАДАЧА 16*/-->
