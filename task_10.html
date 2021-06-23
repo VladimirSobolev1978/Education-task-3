@@ -5,7 +5,8 @@
     const arr = [9, 5, 2, 6, 23, 6, 8, 1, 9, 2];
 
     function positiveFunc(array) {
-        return array.every(value => value > 0);
+        // return array.every(value => value > 0);
+        return array.some(element => element < 0)
     }
 
     const t = positiveFunc(arr);
