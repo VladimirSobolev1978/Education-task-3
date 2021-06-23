@@ -11,13 +11,14 @@
     const string = 'abcetgbabctest'
 
     function replaceFunc(str) {
-        let newStr = str.split('');
-        return newStr.map(element => {
-            if (['a', 'b'].includes(element)) {
-                return element.toUpperCase();
-            }
-            return element;
-        }).join('');
+        return str.replace(/(a)|(b)/g, str => str.toUpperCase());
+        // const newStr = str.split('');
+        // return newStr.map(element => {
+        //     if (['a', 'b'].includes(element)) {
+        //         return element.toUpperCase();
+        //     }
+        //     return element;
+        // }).join('');
 
     }
 
