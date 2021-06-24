@@ -1,0 +1,21 @@
+<!--19. Обрезать строку по определенному кол-ву символов, добавив в конце '...'-->
+
+<!--/*ЗАДАЧА 23*/-->
+<script>
+    const string = 'text education part 2';
+    const number = 6;
+
+    function returnFunc(str, num) {
+        if (str.length > num) {
+            str = str.slice(0, num);
+            return str + '...';
+        }
+    }
+
+
+
+
+    const t = returnFunc(string, number);
+    console.log(t);
+</script>
+<!--/*ЗАДАЧА 23*/-->
