@@ -1,0 +1,29 @@
+<!--13. Реализуйте функцию, которая принимает на вход массив и число, которое задает размер чанка (куска).
+Функция должна вернуть массив, состоящий из чанков указанной размерности.-->
+
+<!--/*ЗАДАЧА 26*/-->
+<script>
+    const array = ['a', 'b', 'c', 'd', 'g'];
+    const num = 3;
+
+    function takeFunc(arr, num) {
+        const newArray = [];
+        for (let i = 0; i < num && i < arr.length; i ++) {
+            newArray.push(arr[i]);
+        }
+        return newArray;
+    }
+    
+    function chunkFunc(arr, number) {
+        const result = [];
+        for (let i = 0; i < arr.length; i += number) {
+            result.push(takeFunc(arr.slice(i), number))
+        }
+        return result;
+    }
+
+    const t = chunkFunc(array, num);
+    console.log(t)
+</script>
+
+<!--/*ЗАДАЧА 26*/-->
