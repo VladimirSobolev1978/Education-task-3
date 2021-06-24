@@ -1,0 +1,20 @@
+<!--7. Дана строка. Если она начинается на 'abc',
+то заменить их на 'www', иначе добавить в конец строки 'zzz'.-->
+
+<!--/*ЗАДАЧА 20*/-->
+<script>
+    const string = 'abctestabctext';
+
+    function replaceFunc(str) {
+        const firstThreeSymbols = str.slice(0,3);
+
+        if (firstThreeSymbols === 'abc') {
+            return 'www' + str.slice(3)
+        }
+        return str + 'zzz';
+    }
+
+    const t = replaceFunc(string);
+    console.log(t);
+</script>
+<!--/*ЗАДАЧА 20*/-->
