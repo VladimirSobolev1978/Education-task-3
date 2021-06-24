@@ -7,17 +7,21 @@
     const string = '__----_-__--';
 
     function convertFunc(str) {
-        const newStr = str.split('');
-        const zeroString = '0';
-        const oneString = '1';
-        return newStr.map(element => {
-            if ('-' === element) {
-                return oneString;
-            }
-            if ('_' === element) {
-                return zeroString;
-            }
-        }).join('');
+
+        return str.replace(/(_)/g, '0').replace(/(-)/g, '1')
+
+
+        // const newStr = str.split('');
+        // const zeroString = '0';
+        // const oneString = '1';
+        // return newStr.map(element => {
+        //     if ('-' === element) {
+        //         return oneString;
+        //     }
+        //     if ('_' === element) {
+        //         return zeroString;
+        //     }
+        // }).join('');
     }
 
     const t = convertFunc(string);
