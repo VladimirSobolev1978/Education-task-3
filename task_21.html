@@ -1,0 +1,25 @@
+<!--14. Напишите код, который находит наиболее часто встречаемый элемент массива.-->
+
+<!--/*ЗАДАЧА 21*/-->
+<script>
+    const array = [6, 3, 8, 2, 6, 8, 2, 5, 7, 2, 6, 8, 6, 2, 6];
+
+    function lengthFunc(arr) {
+        const obj = {};
+
+        for (let i = 0; i < arr.length; i++) {
+            if (!obj[arr[i]]) {
+                obj[arr[i]] = 1;
+                continue
+            }
+            obj[arr[i]]++;
+        }
+        const objValues = Object.values(obj);
+        const maxCount = Math.max(...objValues);
+        return Object.keys(obj).find(key => obj[key] === maxCount);
+    }
+
+    const t = lengthFunc(array);
+    console.log(t)
+</script>
+<!--/*ЗАДАЧА 21*/-->
