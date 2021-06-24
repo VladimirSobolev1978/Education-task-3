@@ -1,0 +1,52 @@
+<!--
+ Сравнить два объекта
+-->
+<script>
+    const objA = {'dog': 6, 'cat': 11};
+    const objA1 = {'cat': 11, dog: 6};
+
+    const objB = {foo: null, bar: {a: 1}};
+    const objB1 = {foo: null, bar: {a: 1}};
+
+    const objC = {foo: null, bar: {a: [1, 2, 3]}};
+    const objC1 = {foo: null, bar: {a: [1, 2, 3]}};
+
+    const objD = {foo: null, bar: NaN};
+    const objD1 = {foo: null, bar: NaN};
+
+    const objE = {foo: null, bar: {a: 2}};
+    const objE1 = {foo: null, bar: {a: 3}};
+
+    function compareFunc(objectOne, objectTwo) {
+        if (objectOne === objectTwo) {
+            return true;
+        }
+
+        const objectOneKeys = Object.keys(objectOne);
+        const objectTwoKeys = Object.keys(objectTwo);
+
+        if (objectOneKeys.length !== objectTwoKeys.length) {
+            return false;
+        }
+        if (objectOneKeys.length === 0 && objectTwoKeys.length === 0) {
+            return true;
+        }
+
+        for (let objectOneKey of objectOneKeys) {
+            if (objectTwo.hasOwnProperty(objectOneKey)) {
+                return false;
+            }
+            if (typeof objectOne[objectOneKey] === 'object' && typeof objectTwo[objectOneKey] === 'object' && objectOne[objectOneKey] !== null && objectTwo[objectOneKey] !== null) {
+               return compareFunc(objectOne[objectOneKey], objectTwo[objectOneKey]);
+            }
+            if (objectOne[objectOneKey] !== objectTwo[objectOneKey]) {
+                return false;
+            }
+        }
+        return true;
+
+    }
+
+    const t = compareFunc(objD, objD1);
+    console.log(t)
+</script>
