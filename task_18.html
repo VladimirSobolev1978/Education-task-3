@@ -8,14 +8,14 @@
 
     function convertFunc(str) {
         const newStr = str.split('');
-        const str1 = '0';
-        const str2 = '1';
+        const zeroString = '0';
+        const oneString = '1';
         return newStr.map(element => {
             if ('-' === element) {
-                return str2;
+                return oneString;
             }
             if ('_' === element) {
-                return str1;
+                return zeroString;
             }
         }).join('');
     }
