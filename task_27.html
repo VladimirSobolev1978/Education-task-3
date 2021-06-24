@@ -1,0 +1,28 @@
+<!--15. Отфильтровать коллекцию, где у свойства есть хоть какое-то значение-->
+
+<!--/*ЗАДАЧА 27*/-->
+<script>
+    const allArray = [
+        {name: 'test', age: 34, country: 'RF'},
+        {name: '', age: null, country: ''},
+        {name: 'test1', age: null, country: ''},
+        {name: '', age: 12, country: ''},
+        {name: '', age: null, country: 'RF'}
+    ]
+
+    function filterFunc(arr) {
+        return arr.filter(element => {
+            const keyArray = Object.keys(element);
+            for (let key of keyArray) {
+                if(element[key]){
+                    return true;
+                }
+            }
+            return false;
+        })
+    }
+
+    const t = filterFunc(allArray);
+    console.log(t);
+</script>
+<!--/*ЗАДАЧА 27*/-->
