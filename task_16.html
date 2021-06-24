@@ -2,10 +2,10 @@
 
 <!--/*ЗАДАЧА 16*/-->
 <script>
-    const string = 'text education exceed.team part 2 for test';
+    const string = 'text education       exceed.team part 2 for test';
 
     function lengthFunc(str) {
-        let splitString = str.split(' ');
+        const splitString = str.split(/\s+/);
         let strMax = splitString[0];
         for (let i = 1; i < splitString.length; i++) {
             if (splitString[i].length > strMax.length) {
