@@ -6,7 +6,11 @@
     const number = 5;
 
     function takeFunc(arr, num) {
-        return arr.filter((element, index) => index < num)
+        const newArray = [];
+        for (let i = 0; i < num; i ++) {
+            newArray.push(arr[i]);
+        }
+        return newArray;
     }
 
     const t = takeFunc(array, number);
