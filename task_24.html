@@ -1,0 +1,29 @@
+<!--16. Отсортировать коллекцию по конкретному свойству объекта и переданным параметром (asc, desc)-->
+
+<!--/*ЗАДАЧА 24*/-->
+<script>
+    const allArray = [
+        {name: 'test', age: 34, country: 'RF'},
+        {name: 'test2', age: 12, country: 'RF'},
+        {name: 'test1', age: 54, country: 'RF'}
+    ]
+
+    function groupingFunc(arr) {
+        const newArr = [...arr];
+        newArr.sort((a, b) => {
+            if (a.age < b.age) {
+                return -1;
+            }
+            if (a.age > b.age) {
+                return 1;
+            }
+        })
+        return newArr;
+    }
+
+
+    const t = groupingFunc(allArray);
+    console.log(t);
+
+</script>
+<!--/*ЗАДАЧА 24*/-->
