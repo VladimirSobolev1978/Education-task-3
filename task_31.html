@@ -1,0 +1,27 @@
+<!--33. Реализуйте функцию, котора параметром принимает строку.
+Выведите сформированный объект из параметров строки браузера.-->
+
+<!--/*ЗАДАЧА 31*/-->
+<script>
+    const string = 'https://underscorejs.org?a=4&b=8';
+
+    function formFunc(str) {
+        const paramsArr = str.split('?')[1].split('&');
+        const result = {};
+        for(let j = 0; j < paramsArr.length; j++) {
+            const params = paramsArr[j].split('=');
+            if(!Number.isNaN(Number(params[1]))) {
+                params[1] = Number(params[1])
+            }
+            if(params[1] === 'true' || params[1] === 'false') {
+                params[1] = params[1] === 'true';
+            }
+            result[params[0]] = params[1];
+        }
+        return result;
+    }
+
+    const t = formFunc(string);
+    console.log(t);
+</script>
+<!--/*ЗАДАЧА 31*/-->
