@@ -1,0 +1,24 @@
+<!--4. Дана строка. Вывести первые три символа и последний
+три символа, если длина строки больше 5.
+Иначе вывести первый символ столько раз, какова длина строки.-->
+
+<!--/*ЗАДАЧА 29*/-->
+<script>
+    // const string = 'text education part 2';
+    const string1 = 'text';
+    
+    function stringFunc(str) {
+        if (str.length > 5) {
+            return str.slice(0, 3) + str.slice(-3)
+        }
+        let newString = '';
+        for (let i = 0; i < str.length; i ++) {
+            newString += str[0];
+        }
+        return newString;
+    }
+
+    const t = stringFunc(string1);
+    console.log(t);
+</script>
+<!--/*ЗАДАЧА 29*/-->
