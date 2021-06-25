@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--18. 1 января 2018 был понедельник.
+Скрипт запрашивает номер месяца (1..12) и число в этом месяце (1..31).
+Выведите имя дня недели (например, «четверг») для введённого числа и месяца.-->
+
+<!--/*ЗАДАЧА 30*/-->
+<script>
+
+
+    function yearFunc(month, dayNum) {
+        const year = 2018;
+        const date = new Date(year, month - 1, dayNum)
+        const days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+        console.log(typeof date.getDay())
+        return days[date.getDay()];
+
+    }
+
+    const t = yearFunc(1,1);
+    console.log(t);
+</script>
+<!--/*ЗАДАЧА 30*/-->
+</body>
+</html>
+
