@@ -1,0 +1,33 @@
+<!--12. Сгруппировать объекты заказов по имени-->
+
+<!--/*ЗАДАЧА 28*/-->
+<script>
+    const collArr = [
+        {name: 'test', price: 200},
+        {name: 'test1', price: 300},
+        {name: 'test', price: 100},
+        {name: 'test', price: 600}
+    ]
+
+    function nameFunc(arr) {
+        const newArr = [];
+        const newObj = {};
+
+        for (let i = 0; i < arr.length; i++) {
+            const {name, price} = arr[i];
+            !newObj[name] ? newObj[name] = price : newObj[name] += price
+        }
+        const keyObj = Object.keys(newObj);
+        for (let key of keyObj) {
+            newArr.push({
+                name: key,
+                price: newObj[key]
+            })
+        }
+        return newArr
+    }
+
+    const t = nameFunc(collArr);
+    console.log(t);
+</script>
+<!--/*ЗАДАЧА 28*/-->
