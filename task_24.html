@@ -8,21 +8,34 @@
         {name: 'test1', age: 54, country: 'RF'}
     ]
 
-    function groupingFunc(arr) {
+    function groupingFunc(arr, property, order = 'asc') {
         const newArr = [...arr];
-        newArr.sort((a, b) => {
-            if (a.age < b.age) {
+        const sortFunc = (a, b) => {
+            if (a[property] > b[property]) {
                 return -1;
             }
-            if (a.age > b.age) {
+            if (a[property] < b[property]) {
                 return 1;
             }
-        })
+            if (a[property] === b[property]) {
+                return 0;
+            }
+        }
+
+        switch (order) {
+            case 'asc':
+                newArr.sort((a, b) => sortFunc(b, a));
+                break
+            case  'desc':
+                newArr.sort((a, b) => sortFunc(a, b));
+                break
+        }
+
         return newArr;
     }
 
 
-    const t = groupingFunc(allArray);
+    const t = groupingFunc(allArray, 'age', 'asc');
     console.log(t);
 
 </script>

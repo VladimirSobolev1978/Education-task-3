@@ -33,7 +33,7 @@
         }
 
         for (let objectOneKey of objectOneKeys) {
-            if (objectTwo.hasOwnProperty(objectOneKey)) {
+            if (!objectTwo.hasOwnProperty(objectOneKey)) {
                 return false;
             }
             if (typeof objectOne[objectOneKey] === 'object' && typeof objectTwo[objectOneKey] === 'object' && objectOne[objectOneKey] !== null && objectTwo[objectOneKey] !== null) {
